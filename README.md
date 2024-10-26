@@ -28,50 +28,5 @@ This application monitors real-time weather conditions using data from the OpenW
 
 #Install dependencies:
 
-bash
-Copy code
-flutter pub get
-API Key Setup:
-
-Sign up on OpenWeatherMap and obtain a free API key.
-Replace <YOUR_API_KEY> in the code with your API key.
-Run the Application:
-
-bash
-Copy code
-flutter run
-Configuration
-The interval for data retrieval can be configured in the application settings (default: 5 minutes).
-User-defined thresholds for alerts can be set to customize notifications for weather conditions like temperature limits or specific conditions (e.g., heatwave alerts).
-Usage
-Upon launch, the application retrieves weather data every 5 minutes.
-Summaries: At the end of each day, a summary is stored containing:
-Average temperature
-Maximum and minimum temperatures
-Dominant weather condition
-Alerts: Alerts trigger if thresholds are breached, with real-time notifications on the console or via email (optional).
-Rollups and Aggregates
-Daily Weather Summary:
-Aggregates daily data to provide:
-Average Temperature
-Maximum and Minimum Temperatures
-Dominant Weather Condition based on most frequent occurrences.
-Alerting Thresholds:
-Configure temperature or condition thresholds (e.g., alert if temperature >35°C for two consecutive updates).
-Alerts triggered if conditions are met, with messages displayed in-app.
-Visualizations
-The application includes visualizations for:
-
-Daily Summaries: Displays weather trends over the course of the day.
-Historical Trends: Track historical data on average temperatures and weather patterns.
-Alerts: Shows a log of all triggered alerts.
-Testing
-System Setup:
-Verify system starts successfully and connects to the OpenWeatherMap API with a valid API key.
-Data Retrieval:
-Simulate API calls at the defined interval and confirm data retrieval for each city.
-Ensure response parsing correctly interprets each weather parameter.
-Temperature Conversion:
-Confirm temperatures convert from Kelvin to Celsius accurately.
-Alert Thresholds:
-Simulate data exceeding thresholds to ensure alerts trigger as expected.
+# Weather Monitoring Application Setup
+## Step 1: Install Dependencies Run the following command to get the necessary packages: ```bash flutter pub get ``` ## Step 2: API Key Setup 1. Sign up on [OpenWeatherMap](https://openweathermap.org/) and obtain a free API key. 2. Replace `<'https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=${'40ce3f067b530f0109a65a11d17f032d'>` in the code with your actual API key. ## Step 3: Run the Application Execute the following command to run the application: ```bash flutter run ``` ## Configuration - **Data Retrieval Interval**: The interval for data retrieval can be configured in the application settings (default: **5 minutes**). - **User-defined Alerts**: Set thresholds for alerts to customize notifications for weather conditions such as temperature limits or specific conditions (e.g., heatwave alerts). ## Usage - Upon launch, the application retrieves weather data every **5 minutes**. ### Daily Summaries At the end of each day, a summary is stored containing: - **Average Temperature** - **Maximum and Minimum Temperatures** - **Dominant Weather Condition** ### Alerts - Alerts trigger if thresholds are breached, with real-time notifications displayed on the console or sent via email (optional). ## Rollups and Aggregates ### Daily Weather Summary Aggregates daily data to provide: - **Average Temperature** - **Maximum and Minimum Temperatures** - **Dominant Weather Condition** based on the most frequent occurrences. ### Alerting Thresholds - Configure temperature or condition thresholds (e.g., alert if temperature > 35°C for two consecutive updates). - Alerts are triggered if conditions are met, with messages displayed in-app. ## Visualizations The application includes visualizations for: - **Daily Summaries**: Displays weather trends over the course of the day. - **Historical Trends**: Track historical data on average temperatures and weather patterns. - **Alerts**: Shows a log of all triggered alerts. ## Testing ### System Setup - Verify that the system starts successfully and connects to the OpenWeatherMap API with a valid API key. ### Data Retrieval - Simulate API calls at the defined interval and confirm data retrieval for each city. - Ensure response parsing correctly interprets each weather parameter. ### Temperature Conversion - Confirm that temperatures convert from Kelvin to Celsius accurately. ### Alert Thresholds - Simulate data exceeding thresholds to ensure alerts trigger as expected.
